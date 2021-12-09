@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "46ef15ec-db26-4184-9a33-242ee7f6c04d",
+		"name": "Billing_app_flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insert_payable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Gas\",\r\n    \"description\": \"Ecogas\",\r\n    \"due_date\": \"2021-12-12\",\r\n    \"amount\": 1300,\r\n    \"status\": \"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/insert_payable",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"insert_payable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_payables",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Gas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:5000/get_payables",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"get_payables"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert_transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payment_method\": \"credit_card\",\r\n    \"card_number\": \"4334 4453 5666 5553\",\r\n    \"amount\": 1300,\r\n    \"bar_code\": 3,\r\n    \"payment_date\": \"2021-12-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/insert_transaction",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"insert_transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_transactions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from_date\": \"2021-11-30\",\r\n    \"to_date\": \"2021-12-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/get_transactions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get_transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
